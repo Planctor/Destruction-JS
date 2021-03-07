@@ -1,4 +1,17 @@
-const roupas = ['preto-P','preto-M','preto-G','vermelho-GG','vermelho-P','vermelho-M','vermelho-G','vermelho-GG','branco-P','branco-M','branco-G','branco-GG'];
+const roupas = [
+                'preto-P',
+                'preto-M',
+                'preto-G',
+                'vermelho-GG',
+                'vermelho-P',
+                'vermelho-M',
+                'vermelho-G',
+                'vermelho-GG',
+                'branco-P',
+                'branco-M',
+                'branco-G',
+                'branco-GG'
+               ];
 
 const camisas ={}
 
