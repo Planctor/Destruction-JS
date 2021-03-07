@@ -2,7 +2,7 @@ const roupas = [
                 'preto-P',
                 'preto-M',
                 'preto-G',
-                'vermelho-GG',
+                'preto-GG',
                 'vermelho-P',
                 'vermelho-M',
                 'vermelho-G',
@@ -13,27 +13,41 @@ const roupas = [
                 'branco-GG'
                ];
 
-const camisas ={}
+const camisas = {}
 
-const camis = roupas.map((roupa)=>{
-    [camisa,tamanho] = roupa.split('-')
-    return {camisa,tamanho}
+const r = roupas.map((roupa)=>{
+  const [cor, tam] = roupa.split('-')
+  let arr = []
+  arr += tam
+  camisas[cor] = arr.slice(0,4)
+  return arr
 })
 
-console.log(camis)
+camisas.preto = r.slice(0,4)
+camisas.vermelho = r.slice(0,4)
+camisas.branco = r.slice(0,4)
+
+const transformJson = JSON.stringify(camisas)
+transformJson
 
 //retorno
-//[
-//  { camisa: 'preto', tamanho: 'P' },
-//  { camisa: 'preto', tamanho: 'M' },
-//  { camisa: 'preto', tamanho: 'G' },
-//  { camisa: 'vermelho', tamanho: 'GG' },
-//  { camisa: 'vermelho', tamanho: 'P' },
-//  { camisa: 'vermelho', tamanho: 'M' },
-//  { camisa: 'vermelho', tamanho: 'G' },
-//  { camisa: 'vermelho', tamanho: 'GG' },
-//  { camisa: 'branco', tamanho: 'P' },
-//  { camisa: 'branco', tamanho: 'M' },
-//  { camisa: 'branco', tamanho: 'G' },
-//  { camisa: 'branco', tamanho: 'GG' }
-//]
+//{
+//  "preto":[
+//    "P",
+//    "M",
+//    "G",
+//    "GG"
+//  ],
+//  "vermelho":[
+//     "P",
+//     "M",
+//     "G",
+//     "GG"
+//    ],
+//  "branco":[
+//    "P",
+//    "M",
+//    "G",
+//    "GG"
+//  ]
+//}
